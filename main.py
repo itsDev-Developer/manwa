@@ -1,11 +1,7 @@
-import uvloop
-import asyncio
-asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
-uvloop.install()
-
-from Tools.auto import main_updates, Vars
+from TG.wks import Bot, worker, asyncio, Vars, remove_expired_users
+from TG.auto import main_updates
 from Tools.my_token import expired_token_
-from Tools.db import remove_expired_users
+
 import os, shutil
 from bot import Bot 
 from Tools.cworker import worker
